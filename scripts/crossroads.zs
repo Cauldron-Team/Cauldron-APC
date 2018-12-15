@@ -57,28 +57,39 @@ recipes.addShaped(<crossroads:large_gear_copper>, [[<crossroads:gear_copper>, <c
 val copperNug = <ore:nuggetCopper>;
 copperNug.remove(<crossroads:nugget_copper>);
 recipes.remove(<crossroads:nugget_copper>);
+
+val mysticalCopperNugget = <ore:nuggetMysticalCopper>;
+mysticalCopperNugget.add(<crossroads:nugget_copper>);
+
 mods.tconstruct.Melting.removeRecipe(<liquid:copper>, <crossroads:nugget_copper>);
 mods.tconstruct.Melting.addRecipe(<liquid:mystical_copper> * 16, <crossroads:nugget_copper>);
+mods.tconstruct.Melting.addRecipe(<liquid:mystical_copper> * 16, <contenttweaker:material_part:14>);
+mods.tconstruct.Melting.addRecipe(<liquid:mystical_bronze> * 16, <contenttweaker:material_part:18>);
 mods.tconstruct.Casting.removeTableRecipe(<crossroads:nugget_copper>);
-mods.tconstruct.Casting.addTableRecipe(<crossroads:nugget_copper>, <tconstruct:cast_custom:1>, <liquid:mystical_copper>, 16, false);
+mods.tconstruct.Casting.addTableRecipe(<contenttweaker:material_part:18>, <tconstruct:cast_custom:1>, <liquid:mystical_copper>, 16, false);
 
 recipes.addShapeless(<contenttweaker:material_part:14>, [<crossroads:nugget_copper>]);
-recipes.addShaped(<contenttweaker:material_part:15>, [[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>],[<crossroads:nugget_copper>, <ore:nuggetTin>, <crossroads:nugget_copper>], [<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>]]);
-recipes.addShaped(<contenttweaker:material_part:6>, [[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>],[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>], [<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>]]);
 
-//Add recipes for mystical copper and bronze
-furnace.addRecipe(<ic2:itemmisc:50>, <crossroads:ore_copper>, 0.7);
-recipes.addShapeless(<contenttweaker:material_part:6>, [<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>,<contenttweaker:material_part:14>]);
-recipes.addShapeless(<contenttweaker:material_part:15>, [<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>,<contenttweaker:material_part:18>]);
-recipes.addShapeless(<contenttweaker:material_part:6> * 9, [<contenttweaker:sub_block_holder_0:1>]);
-recipes.addShapeless(<contenttweaker:material_part:15> * 9, [<contenttweaker:sub_block_holder_0:2>]);
-recipes.addShapeless(<contenttweaker:sub_block_holder_0:2>, [<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>]);
+//nuggets ->ingots
+recipes.addShapeless(<contenttweaker:material_part:6>, [<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>,<ore:nuggetMysticalCopper>]);
+recipes.addShapeless(<contenttweaker:material_part:15>, [<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>,<ore:nuggetMysticalBronze>]);
+recipes.addShaped(<contenttweaker:material_part:15>, [[<ore:nuggetMysticalCopper>, <ore:nuggetMysticalCopper>, <ore:nuggetMysticalCopper>],[<ore:nuggetMysticalCopper>, <ore:nuggetTin>, <ore:nuggetMysticalCopper>], [<ore:nuggetMysticalCopper>, <ore:nuggetMysticalCopper>, <ore:nuggetMysticalCopper>]]);
+
+//ingots -> nuggets
 recipes.addShapeless(<contenttweaker:material_part:18> * 9, [<ore:ingotMysticalBronze>]);
-recipes.addShapeless(<contenttweaker:sub_block_holder_0:1>, [<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>,<contenttweaker:material_part:6>]);
-recipes.addShapeless(<contenttweaker:material_part:14> * 9, [<contenttweaker:material_part:6>]);
-recipes.addShaped(<contenttweaker:sub_block_holder_0:2>, [[<contenttweaker:material_part:6>, <contenttweaker:material_part:6>, <contenttweaker:material_part:6>],[<contenttweaker:material_part:6>, <ore:ingotTin>, <contenttweaker:material_part:6>], [<contenttweaker:material_part:6>, <contenttweaker:material_part:6>, <contenttweaker:material_part:6>]]);
-recipes.addShaped(<contenttweaker:material_part:15>, [[<contenttweaker:material_part:14>, <contenttweaker:material_part:14>, <contenttweaker:material_part:14>],[<contenttweaker:material_part:14>, <ore:nuggetTin>, <contenttweaker:material_part:14>], [<contenttweaker:material_part:14>, <contenttweaker:material_part:14>, <contenttweaker:material_part:14>]]);
+recipes.addShapeless(<contenttweaker:material_part:14> * 9, [<ore:ingotMysticalCopper>]);
 
+//blocks -> ingots
+recipes.addShapeless(<contenttweaker:material_part:15> * 9, [<ore:blockMysticalBronze>]);
+recipes.addShapeless(<contenttweaker:material_part:6> * 9, [<ore:blockMysticalCopper>]);
+
+//ingots -> blocks
+recipes.addShapeless(<contenttweaker:sub_block_holder_0:2>, [<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>,<ore:ingotMysticalCopper>]);
+
+recipes.addShapeless(<contenttweaker:sub_block_holder_0:1>, [<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>,<ore:ingotMysticalBronze>]);
+recipes.addShaped(<contenttweaker:sub_block_holder_0:1>, [[<ore:ingotMysticalBronze>, <ore:ingotMysticalBronze>, <ore:ingotMysticalBronze>],[<ore:ingotMysticalBronze>, <ore:ingotTin>, <ore:ingotMysticalBronze>], [<ore:ingotMysticalBronze>, <ore:ingotMysticalBronze>, <ore:ingotMysticalBronze>]]);
+
+//mystical -> standard
 recipes.addShapeless(<ic2:itemmisc:52>, [<ore:ingotMysticalBronze>]);
 recipes.addShapeless(<ic2:itemmisc:50>, [<ore:ingotMysticalCopper>]);
 
