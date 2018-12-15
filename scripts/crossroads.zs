@@ -8,7 +8,8 @@ import mods.tconstruct.Casting;
 import mods.tconstruct.Alloy;
 
 Grindstone.removeRecipe(<ore:oreCopper>);
-Grindstone.addRecipe(<ore:oreCopper>,<contenttweaker:material_part:12>); //Will almost certainly break with more content tweaker stuff
+Grindstone.addRecipe(<ore:oreCopper>,<contenttweaker:material_part:12>);
+Grindstone.addRecipe(<ore:ingotCopper>,<contenttweaker:material_part:12>); //this way, if you want to make molten copper via crossroads only you still can, but you can convert back to mystical if you have a crossroads setup.
 
 FluidCoolingChamber.addRecipe(<contenttweaker:material_part:6>, <liquid:mystical_copper> * 144, 1000, 100);
 
@@ -51,6 +52,19 @@ recipes.addShaped(<crossroads:gear_copper> * 9, [[null, <contenttweaker:material
 recipes.addShaped(<crossroads:gear_bronze> * 9, [[null, <ore:ingotMysticalBronze>, null],[<ore:ingotMysticalBronze>, <contenttweaker:sub_block_holder_0:2>, <ore:ingotMysticalBronze>], [null, <ore:ingotMysticalBronze>, null]]);
 recipes.addShaped(<crossroads:large_gear_bronze>, [[<crossroads:gear_bronze>, <crossroads:gear_bronze>, <crossroads:gear_bronze>],[<crossroads:gear_bronze>, <contenttweaker:sub_block_holder_0:2>, <crossroads:gear_bronze>], [<crossroads:gear_bronze>, <crossroads:gear_bronze>, <crossroads:gear_bronze>]]);
 recipes.addShaped(<crossroads:large_gear_copper>, [[<crossroads:gear_copper>, <crossroads:gear_copper>, <crossroads:gear_copper>],[<crossroads:gear_copper>, <contenttweaker:sub_block_holder_0:1>, <crossroads:gear_copper>], [<crossroads:gear_copper>, <crossroads:gear_copper>, <crossroads:gear_copper>]]);
+
+//make the copper nuggets from native copper ore not part of oredict
+val copperNug = <ore:nuggetCopper>;
+copperNug.remove(<crossroads:nugget_copper>);
+recipes.remove(<crossroads:nugget_copper>);
+mods.tconstruct.Melting.removeRecipe(<liquid:copper>, <crossroads:nugget_copper>);
+mods.tconstruct.Melting.addRecipe(<liquid:mystical_copper> * 16, <crossroads:nugget_copper>);
+mods.tconstruct.Casting.removeTableRecipe(<crossroads:nugget_copper>);
+mods.tconstruct.Casting.addTableRecipe(<crossroads:nugget_copper>, <tconstruct:cast_custom:1>, <liquid:mystical_copper>, 16, false);
+
+recipes.addShapeless(<contenttweaker:material_part:14>, [<crossroads:nugget_copper>]);
+recipes.addShaped(<contenttweaker:material_part:15>, [[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>],[<crossroads:nugget_copper>, <ore:nuggetTin>, <crossroads:nugget_copper>], [<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>]]);
+recipes.addShaped(<contenttweaker:material_part:6>, [[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>],[<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>], [<crossroads:nugget_copper>, <crossroads:nugget_copper>, <crossroads:nugget_copper>]]);
 
 //Add recipes for mystical copper and bronze
 furnace.addRecipe(<ic2:itemmisc:50>, <crossroads:ore_copper>, 0.7);
