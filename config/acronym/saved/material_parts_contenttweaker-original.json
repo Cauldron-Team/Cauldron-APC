@@ -1,15 +1,15 @@
 {
   "materialMappings": {
-    "mystical_copper_ingot": 6,
-    "mystical_copper_poor_ore": 10,
-    "mystical_copper_nugget": 14,
-    "mystical_bronze_molten": 19,
-    "mystical_bronze_block": 16,
-    "mystical_copper_molten": 13,
-    "mystical_bronze_nugget": 18,
-    "mystical_copper_dust": 12,
-    "mystical_bronze_dust": 17,
-    "mystical_bronze_ingot": 15,
-    "mystical_copper_block": 9
+    "mystical_copper_ingot": 0,
+    "mystical_copper_poor_ore": 2,
+    "mystical_copper_nugget": 4,
+    "mystical_bronze_molten": 10,
+    "mystical_bronze_block": 7,
+    "mystical_copper_molten": 5,
+    "mystical_bronze_nugget": 9,
+    "mystical_copper_dust": 3,
+    "mystical_bronze_dust": 8,
+    "mystical_bronze_ingot": 6,
+    "mystical_copper_block": 1
   }
 }

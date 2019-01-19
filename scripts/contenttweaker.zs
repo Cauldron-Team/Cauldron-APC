@@ -11,28 +11,28 @@ import mods.contenttweaker.MaterialSystem;
 
 var deliciousFood = VanillaFactory.createItemFood("tidepodmk1", 10);
 //REMOVE THE COMMENTS AROUND THIS ONCE CONTENT TWEAKER GETS UPDATED
-/*
+
 deliciousFood.onItemFoodEaten = function(item, world, player) {
     call("/effect @p minecraft:strength 60 3 true", player, world, false, true);
     call("/effect @p minecraft:resistance 60 3 true", player, world, false, true);
     call("/effect @p minecraft:regeneration 60 3 true", player, world, false, true);
     call("/effect @p minecraft:nausea 5 4 true", player, world, false, true);	
 };
-*/
+
 deliciousFood.setAlwaysEdible(true);
 deliciousFood.setSaturation(16);
 deliciousFood.register();
 
 var evenMoreDelicious = VanillaFactory.createItemFood("tidepodmk2", 20);
 //REMOVE THE COMMENTS AROUND THIS ONCE CONTENT TWEAKER GETS UPDATED
-/*
+
 evenMoreDelicious.onItemFoodEaten = function(item, world, player) {
     call("/effect @p minecraft:strength 120 4 true", player, world, false, true);
     call("/effect @p minecraft:resistance 120 4 true", player, world, false, true);
     call("/effect @p minecraft:regeneration 120 4 true", player, world, false, true);
     call("/effect @p minecraft:nausea 3 2 true", player, world, false, true);    
 };
-*/
+
 evenMoreDelicious.setAlwaysEdible(true);
 evenMoreDelicious.setSaturation(40);
 evenMoreDelicious.register();

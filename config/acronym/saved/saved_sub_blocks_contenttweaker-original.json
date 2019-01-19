@@ -1,9 +1,9 @@
 {
   "savedSubBlockNames": {
     "0": {
-      "0": "mystical_copper_poor_ore",
-      "1": "mystical_copper_block",
-      "2": "mystical_bronze_block"
+      "0": "mystical_bronze_block",
+      "1": "mystical_copper_poor_ore",
+      "2": "mystical_copper_block"
     }
   }
 }
